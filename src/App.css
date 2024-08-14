@@ -1,0 +1,110 @@
+.App{
+  height: 100vh;
+  position: relative;
+}
+.App-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 38%;
+  gap: 50px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+  background-image: url("../public/pattern-bg-desktop.png");
+}
+.App-header h1 {
+  color: white;
+  margin-top: 25px;
+}
+.App-header .search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App-header .search input{
+  width: 30%;
+  padding: 15px;
+  border-radius: 30px  0px 0px 30px;
+  outline: none;
+  border: 1px solid black;
+  color: hsl(0, 0%, 59%);
+}
+.App-header .search button{
+  width: 4%;
+  height: 100%;
+  border-radius: 0px  30px 30px 0px;
+  color: white;
+  background-color: hsl(0, 0%, 17%);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.App .ip-info{
+  position: absolute;
+  width: 80%;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  top: 25%;
+  right: 50%;
+  transform: translateX(50%);
+  border-radius: 20px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+
+}
+.App .ip-info div{
+  flex-basis: 25%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.App .ip-info div:not(:first-child)::before{
+  content: "";
+  position: absolute;
+  left: -20px;
+  width: 1px;
+  height: 85%;
+  background-color: hsl(0, 0%, 59%);
+  margin-right: 10px;
+  top: 50%;
+  transform: translateY(-60%);
+
+}
+.App .ip-info h2{
+  font-size: larger;
+}
+
+.App .ip-info p{
+  color: hsl(0, 0%, 59%);
+}
+@media(max-width:650px){
+  .App .ip-info h2{
+    font-size: medium;
+  }
+  
+  .App .ip-info p{
+    font-size: small;
+
+  }
+  .App .ip-info div:not(:first-child)::before{
+    display: none;
+  }
+  .App .ip-info{
+    flex-direction: column;
+    width: 70%;
+    height: fit-content;
+  }
+  .App-header .search input{
+    width: 70%;
+  }
+  .App .ip-info div {
+    gap: 10px;
+}
+.App .ip-info {
+  gap: 10px;
+}
+
+}
